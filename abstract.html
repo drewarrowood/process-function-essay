@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Abstract and references</title>
+<style>body{max-width:42rem;margin:2rem auto;padding:1.4rem;font:18px/1.55 Palatino,Georgia,serif;background:#faf7f2;color:#1c1917}ol{padding-left:1.3rem}li{margin:0.4rem 0}a{color:#6b4a1b}</style></head><body>
+<h1>Every process function lifts to a unitary process</h1>
+<h2>Abstract</h2>
+<p>The grandfather paradox is an intervention with no fixed point. The bootstrap is an intervention with more than one. A process function is a map from outputs to inputs that is admitted only when every local intervention completes exactly once <a href="#r16">[16]</a>. Adding a source and a sink turns any map, process function or not, into a permutation:</p>
+<p><em>U(o, e) = (w(o) xor e, o)</em>, with inverse <em>U^{-1}(i, s) = (s, w(s) xor i)</em>. Both compositions are the identity because xor with a fixed bit is an involution. That is the open case. It does not use the process-function hypothesis, and the identity loop has it.</p>
+<p>Closing the output onto the input is a different step. Against local identities, the closed gram diagonal counts fixed points. For the identity loop that number is 2^n, which is 8 on three parties, not 1. If the map is a process function, two distinct strings cannot both be fixed by one local intervention, so some party disagrees in the string and agrees in w <a href="#r16">[16]</a>. That party is a zero factor in the off-diagonal gram entry, at whichever index the witness sits. The source-to-sink operator is then unitary. Unique completion and the closed unitarity are the same fact read twice.</p>
+<p>The argument does not construct a solution of Einstein's equation for the Lugano function. The named metrics are citations <a href="#r6">[6]</a><a href="#r7">[7]</a><a href="#r9">[9]</a>. The 1995 action paper is Carlini, Frolov, Mensky, Novikov, and H. H. Soleng <a href="#r22">[22]</a>, not Solodukhin.</p>
+<h2>How the citations sit in the text</h2>
+<p>The lexical ban is Dummett <a href="#r1">[1]</a><a href="#r2">[2]</a>. Bilking is Black <a href="#r3">[3]</a>, pressed again by Horwich <a href="#r21">[21]</a>. The two cans are Lewis <a href="#r4">[4]</a>. The Stanford survey is Faye <a href="#r5">[5]</a>. Gödel's metric is <a href="#r6">[6]</a>. The wormhole time machine is Morris, Thorne, and Yurtsever <a href="#r7">[7]</a>. Novikov's principle is Friedman and coauthors <a href="#r8">[8]</a>. The billiard, with one continuation, two, or none, is Echeverria, Klinkhammer, and Thorne <a href="#r9">[9]</a>. A selection rule is not a dynamics: Earman <a href="#r10">[10]</a>. Self-consistency from the action is Carlini, Frolov, Mensky, Novikov, and Soleng <a href="#r22">[22]</a>.</p>
+<p>Deutsch's fixed point is <a href="#r11">[11]</a>. The computational power is Aaronson and Watrous <a href="#r12">[12]</a>. The preparation objection is Bennett, Leung, Smith, and Smolin <a href="#r13">[13]</a>. Post-selection is Lloyd, Maccone, and collaborators <a href="#r14">[14]</a>. A Deutsch condition without a curve is Tolksdorf and Verch <a href="#r20">[20]</a>. The process matrix is Oreshkov, Costa, and Brukner <a href="#r15">[15]</a>. The process function and the reversible extension are Baumeler, Costa, Ralph, Wolf, and Zych <a href="#r16">[16]</a>. The unitary extension of Lugano is Araújo, Feix, Navascués, and Brukner <a href="#r17">[17]</a>. Routed quantum circuits, which do not reconstruct Lugano and do not include Ormrod, are Vanrietvelde, Kristjánsson, and Barrett <a href="#r18">[18]</a>. The conjecture under exclusivity and unambiguity is Daher Ahmed and Kunjwal <a href="#r19">[19]</a>.</p>
+<h2>References</h2>
+<ol>
+<li id="r1">Michael Dummett, “Can an Effect Precede its Cause?”, <em>Proceedings of the Aristotelian Society</em>, Supplementary Volume 28 (1954).</li>
+<li id="r2">Michael Dummett, “Bringing about the Past”, <em>Philosophical Review</em> 73 (1964).</li>
+<li id="r3">Max Black, “Why Cannot an Effect Precede its Cause?”, <em>Analysis</em> 16 (1956).</li>
+<li id="r4">David Lewis, “The Paradoxes of Time Travel”, <em>American Philosophical Quarterly</em> 13 (1976).</li>
+<li id="r5">Jan Faye, “Backward Causation”, <em>Stanford Encyclopedia of Philosophy</em>, substantive revision 28 October 2025.</li>
+<li id="r6">Kurt Gödel, “An Example of a New Type of Cosmological Solutions of Einstein's Field Equations of Gravitation”, <em>Reviews of Modern Physics</em> 21 (1949).</li>
+<li id="r7">Michael S. Morris, Kip S. Thorne, and Ulvi Yurtsever, “Wormholes, Time Machines, and the Weak Energy Condition”, <em>Physical Review Letters</em> 61 (1988).</li>
+<li id="r8">John Friedman, Michael S. Morris, Igor D. Novikov, Fernando Echeverria, Gunnar Klinkhammer, Kip S. Thorne, and Ulvi Yurtsever, “Cauchy Problem in Spacetimes with Closed Timelike Curves”, <em>Physical Review D</em> 42 (1990).</li>
+<li id="r9">Fernando Echeverria, Gunnar Klinkhammer, and Kip S. Thorne, “Billiard Balls in Wormhole Spacetimes with Closed Timelike Curves”, <em>Physical Review D</em> 44 (1991).</li>
+<li id="r10">John Earman, <em>Bangs, Crunches, Whimpers, and Shrieks</em>, Oxford University Press (1995).</li>
+<li id="r11">David Deutsch, “Quantum Mechanics near Closed Timelike Lines”, <em>Physical Review D</em> 44 (1991).</li>
+<li id="r12">Scott Aaronson and John Watrous, “Closed Timelike Curves Make Quantum and Classical Computing Equivalent”, <em>Proceedings of the Royal Society A</em> 465 (2009).</li>
+<li id="r13">Charles H. Bennett, Debbie Leung, Graeme Smith, and John A. Smolin, “Can Closed Timelike Curves or Nonlinear Quantum Mechanics Improve Quantum State Discrimination or Help Solve Hard Problems?”, <em>Physical Review Letters</em> 103 (2009).</li>
+<li id="r14">Seth Lloyd, Lorenzo Maccone, et al., “Closed Timelike Curves via Postselection: Theory and Experimental Test”, <em>Physical Review Letters</em> 106, 040403 (2011).</li>
+<li id="r15">Ognyan Oreshkov, Fabio Costa, and Časlav Brukner, “Quantum Correlations with no Causal Order”, <em>Nature Communications</em> 3 (2012).</li>
+<li id="r16">Ämin Baumeler, Fabio Costa, Timothy C. Ralph, Stefan Wolf, and Magdalena Zych, “Reversible Time Travel with Freedom of Choice”, <em>Classical and Quantum Gravity</em> 36, 224002 (2019); arXiv:1703.00779.</li>
+<li id="r17">Mateus Araújo, Adrien Feix, Miguel Navascués, and Časlav Brukner, “A Purification Postulate for Quantum Mechanics with Indefinite Causal Order”, <em>Quantum</em> 1, 10 (2017).</li>
+<li id="r18">Augustin Vanrietvelde, Hlér Kristjánsson, and Jonathan Barrett, “Routed Quantum Circuits”, <em>Quantum</em> 5, 503 (2021). Nick Ormrod is not an author. This paper does not reconstruct Lugano.</li>
+<li id="r19">Daher Ahmed and Ravi Kunjwal, arXiv:2610.00579 (2026). Purification under mutual exclusivity and unambiguity.</li>
+<li id="r20">J. Tolksdorf and R. Verch, “Quantum Physics, Fields and Closed Timelike Curves”, <em>Communications in Mathematical Physics</em> 357, 319 (2018).</li>
+<li id="r21">Paul Horwich, <em>Asymmetries in Time</em>, MIT Press (1987).</li>
+<li id="r22">A. Carlini, V. P. Frolov, M. B. Mensky, I. D. Novikov, and H. H. Soleng, “Time Machines: The Principle of Self-Consistency as a Consequence of the Principle of Minimal Action”, <em>International Journal of Modern Physics D</em> 4, 557–580 (1995); erratum 5, 99 (1996); arXiv:gr-qc/9506087.</li>
+</ol>
+</body></html>
