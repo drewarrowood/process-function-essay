@@ -4,22 +4,22 @@
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <style>body{max-width:42rem;margin:2rem auto;padding:1.2rem 1.4rem 3rem;background:#faf7f2;color:#1c1917;font:18px/1.55 Palatino,Georgia,serif}h1{font-size:1.7rem;line-height:1.25}h2{font-size:1.2rem;margin-top:2rem;border-top:1px solid #ddd4c6;padding-top:0.8rem}blockquote{border-left:3px solid #8a6a3b;margin:1rem 0;padding:0.2rem 1rem;background:#f3efe6}.note{color:#5c564c;font-size:0.92rem}a{color:#6b4a1b}</style></head><body>
 <h1>Every process function lifts to a unitary process</h1>
-<p class="note">Draft. Not submitted. The order below is the order of the problem, not the order of the proof.</p>
+<p class="note">Draft. Not submitted. References are numbered in order of first appearance.</p>
 <h2>Abstract</h2>
-<p>A time-travel story can fail in two simple ways. The traveller tries to prevent the trip, and no version of the story fits. Or the story fits in more than one way, and nothing picks which one. Philosophers have usually answered by saying that the bad stories do not happen, or that can means something different once the whole past is in view. This essay uses a sharper rule. A process is allowed only when every choice the people in it might make finishes the story exactly once. No finish is the grandfather case. Two finishes are the note that writes itself.</p>
+<p>A time-travel story can fail in two simple ways. The traveller tries to prevent the trip, and no version of the story fits. Or the story fits in more than one way, and nothing picks which one. Philosophers have usually answered by saying that the bad stories do not happen, or that can means something different once the whole past is in view. This essay uses a sharper rule. A process is allowed only when every choice the people in it might make finishes the story exactly once <a href="#r1">[1]</a>. No finish is the grandfather case. Two finishes are the note that writes itself.</p>
 <p>There is a reversible way to write any such process down. Add a source, an extra input nobody chose, and a sink, a copy of what was sent. The map that hides the process under the source and stores the output in the sink can be run forwards and backwards, for every process, even the inconsistent ones. That is the open case. It does not yet feed the output back in as the next input. Doing that is the closed case, and it is not well behaved for every process. The process that just copies its output to its input has eight consistent readings on three people, where a good map would have one.</p>
 <p>What the unique-finish rule adds is the cancellation. If two possible outputs differ, some participant wrote different things and received the same reply. At that desk the two contributions cancel. So the closed map is reversible precisely when every choice already finished once. The essay does not build a spacetime for the example, and it does not say whether the traveller was free.</p>
 <h2>1. Two stories, before the definitions</h2>
 <blockquote><p>The telegraph office closed at six. Mara had the form that would have kept the man off the train, and no window that would take it. She wrote the opposite of whatever had arrived, and no page could be both the thing she received and the opposite of the thing she would send. That is an afternoon with no finish. The other story is the note in the coat. A blank page and a page of ink both complete. That is an afternoon with two finishes.</p></blockquote>
-<p>Neither story is answered by saying the bad afternoon is rare. The first has no fixed point. The second has two. A process function is the class of maps that have neither failure <a href="#r16">[16]</a>.</p>
+<p>Neither story is answered by saying the bad afternoon is rare. The first has no fixed point. The second has two. A process function is the class of maps that have neither failure <a href="#r1">[1]</a>.</p>
 <h2>2. What the literature did instead</h2>
-<p>Dummett treated the ban as a rule about English <a href="#r1">[1]</a><a href="#r2">[2]</a>. Black asked what happens to the person who tries to stop the later event <a href="#r3">[3]</a>. Horwich pressed the same demand <a href="#r21">[21]</a>. Lewis distinguished two meanings of can <a href="#r4">[4]</a>. Faye still treats the paradoxes as unresolved <a href="#r5">[5]</a>. Goedel has a closed curve through every event <a href="#r6">[6]</a>. Morris, Thorne and Yurtsever turn a wormhole into a time machine if the averaged null energy condition fails <a href="#r7">[7]</a>. Friedman and coauthors state Novikov's principle <a href="#r8">[8]</a>. The billiard has one continuation, two, or none <a href="#r9">[9]</a>. Carlini, Frolov, Mensky, Novikov and Soleng derived a version from the action <a href="#r22">[22]</a>. Earman: a selection rule is not a dynamics <a href="#r10">[10]</a>. No metric for the three-party example is constructed.</p>
+<p>Dummett treated the ban as a rule about English <a href="#r2">[2]</a><a href="#r3">[3]</a>. Black asked what happens to the person who tries to stop the later event <a href="#r4">[4]</a>. Horwich pressed the same demand <a href="#r5">[5]</a>. Lewis distinguished two meanings of can <a href="#r6">[6]</a>. Faye still treats the paradoxes as unresolved <a href="#r7">[7]</a>. Goedel has a closed curve through every event <a href="#r8">[8]</a>. Morris, Thorne and Yurtsever turn a wormhole into a time machine if the averaged null energy condition fails <a href="#r9">[9]</a>. Friedman and coauthors state Novikov's principle <a href="#r10">[10]</a>. The billiard has one continuation, two, or none <a href="#r11">[11]</a>. Carlini, Frolov, Mensky, Novikov and Soleng derived a version from the action <a href="#r12">[12]</a>. Earman: a selection rule is not a dynamics <a href="#r13">[13]</a>. No metric for the three-party example is constructed.</p>
 <h2>3. Three quantum replies</h2>
-<p>Deutsch closes a state <a href="#r11">[11]</a>. Aaronson and Watrous put the power at PSPACE <a href="#r12">[12]</a>. Bennett, Leung, Smith and Smolin object to the preparation <a href="#r13">[13]</a>. Tolksdorf and Verch mimic the condition with no curve <a href="#r20">[20]</a>. Lloyd and Maccone post-select <a href="#r14">[14]</a>. Oreshkov, Costa and Brukner write a process matrix <a href="#r15">[15]</a>.</p>
+<p>Deutsch closes a state <a href="#r14">[14]</a>. Aaronson and Watrous put the power at PSPACE <a href="#r15">[15]</a>. Bennett, Leung, Smith and Smolin object to the preparation <a href="#r16">[16]</a>. Tolksdorf and Verch mimic the condition with no curve <a href="#r17">[17]</a>. Lloyd and Maccone post-select <a href="#r18">[18]</a>. Oreshkov, Costa and Brukner write a process matrix <a href="#r19">[19]</a>.</p>
 <h2>4. The rule, stated on the map</h2>
-<p>A process function is a map w such that for every local intervention f there is exactly one string o with o = f(w(o)). The identity loop and the swap fail. Lugano does not. Araujo, Feix, Navascues and Brukner extend that one function <a href="#r17">[17]</a>. Routed quantum circuits are Vanrietvelde, Kristjansson and Barrett <a href="#r18">[18]</a>. Ormrod is not an author.</p>
+<p>A process function is a map w such that for every local intervention f there is exactly one string o with o = f(w(o)). The identity loop and the swap fail. Lugano does not. Araujo, Feix, Navascues and Brukner extend that one function <a href="#r20">[20]</a>. Routed quantum circuits are Vanrietvelde, Kristjansson and Barrett <a href="#r21">[21]</a>. Ormrod is not an author of that paper.</p>
 <h2>5. The open case</h2>
-<p>U(o, e) = (w(o) xor e, o), and the inverse is (s, w(s) xor i). Both compositions are the identity because xor is an involution. This holds for every w <a href="#r16">[16]</a>. Daher Ahmed and Kunjwal give two sufficient conditions that are not used here <a href="#r19">[19]</a>.</p>
+<p>U(o, e) = (w(o) xor e, o), and the inverse is (s, w(s) xor i). Both compositions are the identity because xor is an involution. This holds for every w <a href="#r1">[1]</a>. Daher Ahmed and Kunjwal give two sufficient conditions that are not used here <a href="#r22">[22]</a>.</p>
 <h2>6. The closed case</h2>
 <p>Against local identities the identity loop has gram diagonal 2^n. On three parties that is 8, not 1.</p>
 <h2>7. Why the unique finish is the cancellation</h2>
@@ -28,27 +28,27 @@
 <p>No Einstein metric for Lugano. The closed contraction is not an isometry for every w. The open bijection is.</p>
 <h2>References</h2>
 <ol>
-<li id="r1">Dummett 1954, Aristotelian Society supplementary volume 28.</li>
-<li id="r2">Dummett 1964, Philosophical Review 73.</li>
-<li id="r3">Black 1956, Analysis 16.</li>
-<li id="r4">Lewis 1976, American Philosophical Quarterly 13.</li>
-<li id="r5">Faye, Stanford Encyclopedia, revision 28 October 2025.</li>
-<li id="r6">Goedel 1949, Reviews of Modern Physics 21.</li>
-<li id="r7">Morris, Thorne, Yurtsever 1988, Physical Review Letters 61.</li>
-<li id="r8">Friedman et al. 1990, Physical Review D 42.</li>
-<li id="r9">Echeverria, Klinkhammer, Thorne 1991, Physical Review D 44.</li>
-<li id="r10">Earman 1995, Bangs, Crunches, Whimpers, and Shrieks.</li>
-<li id="r11">Deutsch 1991, Physical Review D 44.</li>
-<li id="r12">Aaronson and Watrous 2009, Proceedings of the Royal Society A 465.</li>
-<li id="r13">Bennett, Leung, Smith, Smolin 2009, Physical Review Letters 103.</li>
-<li id="r14">Lloyd, Maccone et al. 2011, Physical Review Letters 106, 040403.</li>
-<li id="r15">Oreshkov, Costa, Brukner 2012, Nature Communications 3.</li>
-<li id="r16">Baumeler, Costa, Ralph, Wolf, Zych 2019, Classical and Quantum Gravity 36, 224002.</li>
-<li id="r17">Araujo, Feix, Navascues, Brukner 2017, Quantum 1, 10.</li>
-<li id="r18">Vanrietvelde, Kristjansson, Barrett 2021, Quantum 5, 503. Ormrod is not an author.</li>
-<li id="r19">Daher Ahmed and Kunjwal, arXiv:2610.00579 (2026).</li>
-<li id="r20">Tolksdorf and Verch 2018, Communications in Mathematical Physics 357, 319.</li>
-<li id="r21">Horwich 1987, Asymmetries in Time.</li>
-<li id="r22">Carlini, Frolov, Mensky, Novikov, and H. H. Soleng, International Journal of Modern Physics D 4, 557-580 (1995); erratum 5, 99 (1996).</li>
+<li id="r1">A. Baumeler, F. Costa, T. C. Ralph, S. Wolf, and M. Zych, Reversible time travel with freedom of choice, Classical and Quantum Gravity 36, 224002 (2019).</li>
+<li id="r2">M. Dummett, Can an effect precede its cause?, Proceedings of the Aristotelian Society, Supplementary Volume 28 (1954).</li>
+<li id="r3">M. Dummett, Bringing about the past, Philosophical Review 73 (1964).</li>
+<li id="r4">M. Black, Why cannot an effect precede its cause?, Analysis 16 (1956).</li>
+<li id="r5">P. Horwich, Asymmetries in Time, MIT Press (1987).</li>
+<li id="r6">D. Lewis, The paradoxes of time travel, American Philosophical Quarterly 13 (1976).</li>
+<li id="r7">J. Faye, Backward causation, Stanford Encyclopedia of Philosophy, substantive revision 28 October 2025.</li>
+<li id="r8">K. Goedel, An example of a new type of cosmological solutions of Einstein's field equations of gravitation, Reviews of Modern Physics 21 (1949).</li>
+<li id="r9">M. S. Morris, K. S. Thorne, and U. Yurtsever, Wormholes, time machines, and the weak energy condition, Physical Review Letters 61 (1988).</li>
+<li id="r10">J. Friedman, M. S. Morris, I. D. Novikov, F. Echeverria, G. Klinkhammer, K. S. Thorne, and U. Yurtsever, Cauchy problem in spacetimes with closed timelike curves, Physical Review D 42 (1990).</li>
+<li id="r11">F. Echeverria, G. Klinkhammer, and K. S. Thorne, Billiard balls in wormhole spacetimes with closed timelike curves, Physical Review D 44 (1991).</li>
+<li id="r12">A. Carlini, V. P. Frolov, M. B. Mensky, I. D. Novikov, and H. H. Soleng, Time machines: the principle of self-consistency as a consequence of the principle of minimal action, International Journal of Modern Physics D 4, 557-580 (1995); erratum 5, 99 (1996).</li>
+<li id="r13">J. Earman, Bangs, Crunches, Whimpers, and Shrieks, Oxford University Press (1995).</li>
+<li id="r14">D. Deutsch, Quantum mechanics near closed timelike lines, Physical Review D 44 (1991).</li>
+<li id="r15">S. Aaronson and J. Watrous, Closed timelike curves make quantum and classical computing equivalent, Proceedings of the Royal Society A 465 (2009).</li>
+<li id="r16">C. H. Bennett, D. Leung, G. Smith, and J. A. Smolin, Physical Review Letters 103 (2009).</li>
+<li id="r17">J. Tolksdorf and R. Verch, Quantum physics, fields and closed timelike curves, Communications in Mathematical Physics 357, 319 (2018).</li>
+<li id="r18">S. Lloyd, L. Maccone, et al., Closed timelike curves via postselection, Physical Review Letters 106, 040403 (2011).</li>
+<li id="r19">O. Oreshkov, F. Costa, and C. Brukner, Quantum correlations with no causal order, Nature Communications 3 (2012).</li>
+<li id="r20">M. Araujo, A. Feix, M. Navascues, and C. Brukner, A purification postulate for quantum mechanics with indefinite causal order, Quantum 1, 10 (2017).</li>
+<li id="r21">A. Vanrietvelde, H. Kristjansson, and J. Barrett, Routed quantum circuits, Quantum 5, 503 (2021). Ormrod is not an author.</li>
+<li id="r22">Daher Ahmed and R. Kunjwal, arXiv:2610.00579 (2026).</li>
 </ol>
 </body></html>
