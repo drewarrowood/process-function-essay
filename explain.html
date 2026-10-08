@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Unique finish, at more length</title>
+<meta property="og:title" content="Unique finish, at more length">
+<meta property="og:description" content="One desk, three desks, and why a metric is a different question.">
+<style>body{max-width:42rem;margin:2rem auto;padding:1.2rem;background:#faf7f2;color:#1c1917;font:18px/1.55 Palatino,Georgia,serif}.eq{background:#f3efe6;padding:0.6rem 0.8rem}a{color:#6b4a1b}</style></head><body>
+<h1>Unique finish, at more length</h1>
+<p>Equations are text, so they show if a script does not run. This is an explanation, not a metric.</p>
+<h2>The office</h2>
+<p>Three desks share an afternoon. Each desk sends a bit and is shown a bit. The process is the rule that turns what was sent into what is shown. A local rule is what a desk does with the bit it is shown: copy it, flip it, or ignore it and write 0 or 1. The afternoon finishes when the bits that were sent are the bits the desks would write after seeing what came back.</p>
+<p class="eq">Fix(w, f, o) means: for every desk k, o_k = f_k(w_k(o)).</p>
+<p class="eq">Process(w) means: for every choice of local rules f, exactly one string o satisfies Fix.</p>
+<p>No finish is the grandfather case. She writes the opposite of whatever arrived, and no page can be both the thing she received and the opposite of the thing she would send. Two finishes are the note in the coat. A blank page and a page of ink both complete the same errand. Nothing in the office picks which one happened.</p>
+<h2>One desk, written out</h2>
+<p>One desk, two bits. The copy rule returns whatever was sent. Against the identity rule, which writes what it is shown, both bits finish. Send 0, receive 0, write 0. Send 1, receive 1, write 1. Two finishes, so the copy rule is not a process function. The flip rule returns the opposite. Against identity, neither bit finishes. Against the flip intervention, exactly one bit finishes for each choice, but the condition has to hold for every intervention, not for the one that works. A process function is a rule that survives every local choice, once.</p>
+<h2>Three desks</h2>
+<p>The copy rule on three desks, against identity, finishes every string. There are eight strings. A good map would have one consistent afternoon. Eight is 2 to the number of desks. That number is the diagonal of the identity loop. A disagreement can kill an off-diagonal, where two strings differ and some desk was shown the same bit. It cannot make this diagonal equal to 1. Unique finish is the extra premise that removes the seven extra afternoons.</p>
+<h2>The spare page</h2>
+<p>Add a spare page nobody chose, and a copy of what was sent. Hide the afternoon under the spare page by adding the spare bits, and store the sent page in the copy. Run it backwards by reading the copy and adding the process of that copy to the other page. Both ways return the start, because adding a bit twice cancels. This works for every rule, including the copy rule and the swap. Nothing has been fed back. Recovery of the rule at source zero is not uniqueness of the fixed point.</p>
+<p class="eq">U(o, e) = (w(o) xor e, o). The reverse is (s, w(s) xor i).</p>
+<h2>Two literatures, more slowly</h2>
+<p>Lewis says she can prevent the trip, because a small change of her hand would have done it, and she cannot, because the afternoon that occurs is one in which she does not. That splits a word. It does not say which afternoons occur. Novikov keeps the consistent data and assigns the rest measure zero. Earman: a selection rule is not a dynamics. The process-function rule is a condition on the map.</p>
+<p>Pnueli's always and eventually are about runs of a program. Emerson and Clarke quantify over paths. The formula here does not. It says the equation of agreement has one solution. Godel, the wormhole, and Ori's dust shell ask whether a curve can close. Dust follows geodesics. It does not evaluate two bits and return a third. A curve would still need a scattering rule. None of the named metrics has been shown to have the three-bit example as that rule.</p>
+<p>Deutsch mixes the fixed points of a state. The process function refuses the mix. Lloyd and Maccone throw away the runs that do not match. The process function never generates them. The source and the sink in Baumeler, Costa, Ralph, Wolf and Zych are the spare page and the copy.</p>
+<p>PDF: <a href="https://raw.githubusercontent.com/drewarrowood/process-function-essay/main/paper.pdf">paper.pdf</a>. Continued: <a href="explain-2.html">part 2</a>.</p>
+</body></html>
