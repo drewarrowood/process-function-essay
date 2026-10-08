@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Part 1. The formula</title>
+<script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]}};</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>body{max-width:42rem;margin:2rem auto;padding:1.2rem;background:#faf7f2;color:#1c1917;font:18px/1.55 Palatino,Georgia,serif}a{color:#6b4a1b}blockquote{border-left:3px solid #8a6a3b;padding-left:1rem;background:#f3efe6}</style></head><body>
+<p><a href="index.html">Contents</a> · <a href="02-literatures.html">Next</a></p>
+<h1>Every process function lifts to a unitary process</h1>
+<p>Part 1 of 4. Draft. Not submitted.</p>
+<h2>Abstract</h2>
+<p>A time-travel story can fail in two simple ways. The traveller tries to prevent the trip, and no version fits. Or the story fits in more than one way, and nothing picks which one. A process is allowed only when every local choice finishes the story exactly once. No finish is the grandfather case. Two finishes are the note that writes itself.</p>
+<p>The rule is a condition on messages. It does not need a metric. Adding a spare page and a copy of what was sent makes a reversible record of any rule, including the bad ones. Feeding the letter back in is not reversible for every rule. The copy rule has eight consistent afternoons on three desks. Unique finish is what cancels the extra afternoon.</p>
+<h2>1. Two stories</h2>
+<blockquote><p>The telegraph office closed at six. Mara wrote the opposite of whatever had arrived. No page could be both the thing she received and the opposite of the thing she would send. That is an afternoon with no finish. A second afternoon leaves a note in the coat. A blank page and a page of ink both complete the same errand. Nothing in the office picks which one happened.</p></blockquote>
+<p>Lewis would say she can prevent the trip, in the sense that a small change of her hand would have done it, and she cannot, in the sense that the afternoon that occurs is one in which she does not. That splits the word can. It does not say which afternoons occur. Novikov's principle keeps the consistent ones and assigns the rest measure zero. A selection rule is not a dynamics. The sharper rule is a condition on the map from what was sent to what was received: every local choice has exactly one completion.</p>
+<h2>2. The formula</h2>
+<p>Let \(o\) be the string of bits that were sent, one per party. Let \(w\) return the string that was received. Let \(f\) be a local rule, from a received bit to a sent bit. The one step is agreement after the return:</p>
+\[ \mathrm{Fix}(w,f,o) \iff \forall k.\; o_k = f_k(w_k(o)). \]
+<p>A process function is exists-and-unique over interventions:</p>
+\[ \mathrm{Process}(w) \iff \forall f.\; \exists!\, o.\; \mathrm{Fix}(w,f,o). \]
+<p>The grandfather choice is an empty preimage, \(\forall o.\, \neg\mathrm{Fix}(w,f,o)\). The note in the coat is two finishes. Either refutes Process. On a finite set of strings this is the whole content of always exactly one finish. It is not Pnueli's always and eventually, and it is not a path quantifier over a curve.</p>
+<h2>3. Why a metric is not a premise</h2>
+<p>Nothing in that sentence is a distance or a clock reading. The parties are labels. They are not points of a manifold. The open shuffle below is a permutation of bit strings. XOR is addition modulo 2, not a displacement along a curve. Godel's solution, the Morris-Thorne wormhole, and Ori's dust shell answer a different question: can Einstein's equation produce a closed curve? A process function answers the question those curves leave open, which maps finish every local choice once. Balls and walls on a wormhole background are a picture of an implementation. The picture is not a premise. None of the named metrics has been shown to have the three-bit example as its scattering map.</p>
+<p><a href="02-literatures.html">Part 2. The two literatures</a></p>
+</body></html>
