@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Unique finish, written as a temporal formula</title>
+<script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]}};</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>body{max-width:42rem;margin:2rem auto;padding:1.2rem;background:#faf7f2;color:#1c1917;font:18px/1.55 Palatino,Georgia,serif}h2{margin-top:1.6rem}a{color:#6b4a1b}</style></head><body>
+<h1>Unique finish, written as a temporal formula</h1>
+<p>Draft. Not submitted. The claim is a condition on one step, not a metric.</p>
+<h2>Abstract</h2>
+<p>A time-travel story fails in two ways. No version fits, or more than one version fits. Philosophers answered by changing the meaning of can, or by discarding the bad histories. This note writes the sharper rule in the language of temporal logic. A state is the string that was sent. A process returns a string. An intervention is a local rule. The one step is agreement after the return. A process is admitted only when every intervention has exactly one state that agrees. The open shuffle that records the step is a bijection for every process. Closing the step is not. The copy rule has eight agreeing states on three people.</p>
+<h2>1. The formula</h2>
+<p>Let \(o\) be a string of bits, one per party. Let \(w\) send that string to the string received. Let \(f\) be a local rule from a received bit to a sent bit. Write</p>
+\[ \mathrm{Fix}(w,f,o) \iff \forall k.\; o_k = f_k(w_k(o)). \]
+<p>The process-function clause is</p>
+\[ \mathrm{Process}(w) \iff \forall f.\; \exists!\, o.\; \mathrm{Fix}(w,f,o). \]
+<p>In a finite set of strings this is the content of always exactly one finish. It is not a path quantifier over a curve. The grandfather case is \(\forall o.\, \neg\mathrm{Fix}(w,f,o)\). The note in the coat is two distinct states that both satisfy Fix. Either refutes Process.</p>
+<h2>2. Two literatures</h2>
+<p>Temporal logic began as a reading of tense, not of computation. Prior's tense operators were a formalization of before and after <a href="#r1">[1]</a>. Pnueli proposed linear temporal logic as a language for programs: always, eventually, until <a href="#r2">[2]</a>. Clarke and Emerson gave the branching version, CTL, with path quantifiers over a computation tree <a href="#r3">[3]</a>. The formula above uses none of the path quantifiers. Exists-unique is a first-order condition on one transition. Calling it temporal records what the transition is: the story after the return must agree with the story that was sent.</p>
+<p>The other literature is about which stories are kept. Dummett treated the ban as a rule of English <a href="#r4">[4]</a>. Lewis split can into a local and a global reading <a href="#r5">[5]</a>. Godel gave a rotating dust solution with a closed curve through every event <a href="#r6">[6]</a>. Morris, Thorne and Yurtsever made a wormhole into a time machine if the averaged null energy condition fails <a href="#r7">[7]</a>. The billiard has data with one continuation, two, or none <a href="#r8">[8]</a>. Novikov's principle keeps the consistent data and assigns the rest measure zero <a href="#r9">[9]</a>. Earman: a selection rule is not a dynamics <a href="#r10">[10]</a>. Deutsch asks for a fixed point of a state on the curve <a href="#r11">[11]</a>. Lloyd and Maccone post-select the matching runs <a href="#r12">[12]</a>. Oreshkov, Costa and Brukner write a channel from outputs to inputs with no assumed order <a href="#r13">[13]</a>. Baumeler, Costa, Ralph, Wolf and Zych define the process function and extend it by a source and a sink <a href="#r14">[14]</a>. Ori's dust shell is a compact vacuum core that develops closed curves; it is not this formula <a href="#r15">[15]</a>.</p>
+<h2>3. The open shuffle</h2>
+<p>Add a source \(e\) and store the sent string. Define</p>
+\[ U(o,e) = (w(o)\oplus e,\, o), \qquad U^{-1}(i,s) = (s,\, w(s)\oplus i). \]
+<p>Both compositions are the identity because \(a\oplus(a\oplus b)=b\). This holds for every \(w\), including the copy rule and the swap. Recovery of \(w\) at source 0 is not uniqueness of the fixed point. The Lean file records both compositions as <code>extend_left_inv</code> and <code>extend_right_inv</code>.</p>
+<h2>4. The closed step</h2>
+<p>Feeding the output back in, against the identity intervention, asks which strings equal their image. For the copy rule every string does. On three bits the filter has length 8. A witness can kill an off-diagonal of the closed contraction. It cannot make this diagonal equal to 1. Unique finish is what removes the extra count: if two strings differ, some party sent different bits and received the same bit, and that party is a zero factor.</p>
+<h2>5. What is not claimed</h2>
+<p>No line element is constructed. CTL path quantifiers are not used. The 2026 note of Daher Ahmed and Kunjwal gives two sufficient conditions, mutual exclusivity and unambiguity, and is not a premise here <a href="#r16">[16]</a>. Routed quantum circuits are Vanrietvelde, Kristjansson and Barrett; Ormrod is not an author <a href="#r17">[17]</a>.</p>
+<h2>References</h2>
+<ol>
+<li id="r1">A. N. Prior, Time and Modality, Oxford University Press (1957).</li>
+<li id="r2">A. Pnueli, The temporal logic of programs, 18th FOCS (1977).</li>
+<li id="r3">E. M. Clarke and E. A. Emerson, Design and synthesis of synchronization skeletons using branching time temporal logic, Logics of Programs (1981).</li>
+<li id="r4">M. Dummett, Can an effect precede its cause?, Proceedings of the Aristotelian Society, Supplementary Volume 28 (1954).</li>
+<li id="r5">D. Lewis, The paradoxes of time travel, American Philosophical Quarterly 13 (1976).</li>
+<li id="r6">K. Godel, Reviews of Modern Physics 21 (1949).</li>
+<li id="r7">M. S. Morris, K. S. Thorne, and U. Yurtsever, Physical Review Letters 61 (1988).</li>
+<li id="r8">F. Echeverria, G. Klinkhammer, and K. S. Thorne, Physical Review D 44 (1991).</li>
+<li id="r9">J. Friedman et al., Physical Review D 42 (1990).</li>
+<li id="r10">J. Earman, Bangs, Crunches, Whimpers, and Shrieks (1995).</li>
+<li id="r11">D. Deutsch, Physical Review D 44 (1991).</li>
+<li id="r12">S. Lloyd, L. Maccone, et al., Physical Review Letters 106, 040403 (2011).</li>
+<li id="r13">O. Oreshkov, F. Costa, and C. Brukner, Nature Communications 3 (2012).</li>
+<li id="r14">A. Baumeler, F. Costa, T. C. Ralph, S. Wolf, and M. Zych, Classical and Quantum Gravity 36, 224002 (2019).</li>
+<li id="r15">A. Ori, Physical Review D 76, 044002 (2007).</li>
+<li id="r16">Daher Ahmed and R. Kunjwal, arXiv:2610.00579 (2026).</li>
+<li id="r17">A. Vanrietvelde, H. Kristjansson, and J. Barrett, Quantum 5, 503 (2021).</li>
+</ol>
+<p>Lean: <a href="https://github.com/drewarrowood/process-function-essay/blob/main/lean/TemporalLift.lean">TemporalLift.lean</a>.</p>
+</body></html>
