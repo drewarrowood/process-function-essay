@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta property="og:title" content="Unique finish, explained">
+<meta property="og:description" content="Why a process function is one step, not a metric, and why the copy rule has eight finishes.">
+<title>Unique finish, explained</title>
+<style>body{max-width:42rem;margin:2rem auto;padding:1.2rem;background:#faf7f2;color:#1c1917;font:18px/1.55 Palatino,Georgia,serif}h2{margin-top:1.6rem}.eq{font-family:Georgia,serif;background:#f3efe6;padding:0.6rem 0.8rem}a{color:#6b4a1b}</style></head><body>
+<h1>Unique finish, explained</h1>
+<p>Draft. Equations are written as text, so they show even if the browser does not run a math script. The claim is a condition on messages. No metric is constructed.</p>
+<h2>What the rule is saying</h2>
+<p>A time-travel story can fail in two ways, and they are not the same failure. In the first, the traveller tries to prevent the trip, and no version of the afternoon fits. In the second, the story fits in more than one way, and nothing picks which one happened. The first is the grandfather case. The second is the note that writes itself. A process is allowed only when every local choice finishes the story exactly once.</p>
+<p>Think of three desks. Each desk sends a bit and receives a bit. The process is the rule that turns the sent bits into the received bits. An intervention is what each desk does with the bit it is shown: copy it, flip it, or ignore it and write a fixed bit. The afternoon finishes when the bits that were sent are exactly the bits the desks would write after seeing what came back.</p>
+<p class="eq">Fix(w, f, o) means: for every desk k, the sent bit o_k equals f_k of the received bit w_k(o).</p>
+<p class="eq">Process(w) means: for every choice of rules f, there is exactly one string o that satisfies Fix.</p>
+<p>That is the whole condition. It is a sentence about functions on bits. It does not mention a clock, a distance, or a line element.</p>
+<h2>Why this is not Pnueli's always</h2>
+<p>Temporal logic began as a way to write before and after. Prior's operators were tense. Pnueli used always, eventually, and until for programs. Emerson and Clarke added path quantifiers: on every run, or on some run. The formula above uses none of those. Exists-and-unique is a condition on one equation. Calling it temporal records what the step is. The story after the return must agree with the story that was sent. A path quantifier would say that a machine eventually reaches a fixed point. The claim is not that. It is that the equation of agreement has one solution.</p>
+<p>The grandfather choice is the equation with no solution. The note in the coat is the equation with two. Either one is enough to reject the process. On a finite set of strings there is nothing else for the rule to mean.</p>
+<h2>Why a metric is not needed</h2>
+<p>The parties are labels, not points of a manifold. Godel's rotating dust, the Morris-Thorne wormhole, and Ori's dust shell answer a different question: can Einstein's equation produce a closed curve? A process function answers the question those curves leave open, which maps finish every local choice once. Balls and walls on a wormhole are a picture of how such a map might be implemented. The picture is not a premise. None of the named metrics has been shown to have the three-bit example as its scattering map. Changing the background does not supply the collision rule.</p>
+<h2>The open shuffle, in ordinary words</h2>
+<p>Add a spare page that nobody chose, and a copy of what was sent. Hide the afternoon under the spare page by adding the spare bits, and store the sent page in the copy. This shuffle can be run forwards and backwards. It works for every rule, including the rules that do not finish. The spare page comes back because adding a bit twice is the same as not adding it. Nothing has been fed back into the desk.</p>
+<p class="eq">U(o, e) = (w(o) xor e, o). The reverse reads the copy and adds w of that copy to the other page. Both compositions are the identity.</p>
+<p>This is bookkeeping. It is not the claim that the afternoon was consistent. Recovery of the rule at source zero is not uniqueness of the fixed point.</p>
+<h2>The closed desk</h2>
+<p>Feeding the letter back in is a different map. Against the rule that copies whatever was received, every string finishes. On three desks there are eight possible strings, and all eight agree. A good map would have one consistent afternoon. The copy rule has eight. That is the control. Unique finish is what removes the extra count. If two afternoons differ, some desk wrote different letters and was shown the same letter. That desk makes the extra afternoon cancel, whichever desk it is. So the closed map is reversible only for the rules that already finished once.</p>
+<h2>What the longer essay proved, and what this page does not</h2>
+<p>The gram cancellation is the reason a process function makes the closed map unitary. It is not proved on this page. This page states the empty preimage, the double preimage, the open shuffle, and the count of eight. The Lean file records the shuffle both ways and the eight-count. No Einstein metric is claimed. Routed quantum circuits are the paper of Vanrietvelde, Kristjansson and Barrett. Ormrod is not an author. The 1995 action paper is Carlini, Frolov, Mensky, Novikov, and H. H. Soleng.</p>
+<p>PDF of the earlier essay: <a href="https://raw.githubusercontent.com/drewarrowood/process-function-essay/main/paper.pdf">paper.pdf</a>. Lean: <a href="https://github.com/drewarrowood/process-function-essay/blob/main/lean/TemporalLift.lean">TemporalLift.lean</a>.</p>
+</body></html>
