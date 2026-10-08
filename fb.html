@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Process functions as a temporal uniqueness condition</title>
+<meta property="og:title" content="Process functions as a temporal uniqueness condition">
+<meta property="og:description" content="A process is allowed only when every choice finishes exactly once. No script. Equations are HTML.">
+<style>body{max-width:40rem;margin:1.2rem auto;padding:1rem;background:#faf7f2;color:#1c1917;font:18px/1.55 Georgia,serif}h1{font-size:1.4rem}h2{font-size:1.15rem;margin-top:1.6rem}.eq{background:#f3efe6;padding:.6rem .8rem;margin:.6rem 0;font-family:Georgia,serif}.status{background:#f5f0e6;border:1px solid #e7e0d2;padding:.7rem}</style>
+</head><body>
+<h1>Process functions as a temporal uniqueness condition</h1>
+<p>Draft. Equations are written as HTML so they show in Facebook’s browser, which does not run MathJax.</p>
+<div class="status">Proved: every process finishes once; an empty preimage and a double preimage each refute that; the open shuffle is a bijection for every rule; the closed copy rule has 8 finishes on three bits. Not proved here: the gram cancellation, and any Einstein metric.</div>
+<h2>The one step</h2>
+<p>A state o is the string that was sent. w(o) is the string returned. f is the local rule.</p>
+<div class="eq">Fix(w, f, o) &nbsp; means &nbsp; for every party k, &nbsp; o<sub>k</sub> = f<sub>k</sub>(w<sub>k</sub>(o)).</div>
+<p>In next-time notation that is o = f(Xo), with Xo = w(o). There is no further next.</p>
+<div class="eq">Process(w) &nbsp; means &nbsp; for every intervention f, there is exactly one o with Fix(w, f, o).</div>
+<p>That is not Pnueli’s “always,” and it is not a path quantifier. The quantifier runs over interventions, not over times.</p>
+<h2>The two failures</h2>
+<div class="eq">No finish: &nbsp; for every o, &nbsp; not Fix(w, f, o).</div>
+<div class="eq">Two finishes: &nbsp; there are o and p, o ≠ p, and both fix.</div>
+<p>The first is the grandfather case. The second is the note in the coat. Each refutes Process(w).</p>
+<h2>The open shuffle is not a tense</h2>
+<div class="eq">U(o, e) = (w(o) xor e, &nbsp; o)</div>
+<div class="eq">U inverse (i, s) = (s, &nbsp; w(s) xor i)</div>
+<p>Both compositions are the identity for every w, because a xor (a xor b) = b. The copy rule has this bijection and is not a process.</p>
+<h2>Closing the loop</h2>
+<p>Against the identity intervention, the copy rule w(o) = o finishes for every string. On three bits that is 8 finishes, not 1. The open bijection does not cancel the extra seven.</p>
+<p>Lean file: TemporalLift.lean. No Einstein metric is defined.</p>
+</body></html>
